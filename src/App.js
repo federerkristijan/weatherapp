@@ -15,7 +15,7 @@ function App() {
     }
   };
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q={city name}&units=metric&appid=af4ec9f148b5b6985504ee2642344030`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=af4ec9f148b5b6985504ee2642344030`;
 
   return (
     <div className="App">
@@ -37,7 +37,6 @@ function App() {
             </div>
             <div className="description">
               {data.weather ? <p>{data.weather[0].main}</p> : null}
-              <p>Clouds</p>
             </div>
           </div>
         </div>
@@ -54,7 +53,9 @@ function App() {
               <p>Humidity</p>
             </div>
             <div className="wind">
-              {data.wind ? <p className="bold">{data.wind.speed.toFixed()}km/h</p> : null}
+              {data.wind ? (
+                <p className="bold">{data.wind.speed.toFixed()}km/h</p>
+              ) : null}
               <p>Winds</p>
             </div>
           </div>
