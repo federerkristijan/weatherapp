@@ -15,7 +15,7 @@ function App() {
     }
   };
 
-  const url = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&units=metric&appid=af4ec9f148b5b6985504ee2642344030`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q={city name}&units=metric&appid=af4ec9f148b5b6985504ee2642344030`;
 
   return (
     <div className="App">
